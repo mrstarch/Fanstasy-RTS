@@ -9,7 +9,6 @@ public class MenuManager : MonoBehaviour
     private static MenuManager _instance;
     public static MenuManager instance { get { return _instance; } }
 
-    [SerializeField] Button backButton;
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject buildMenu;
     [SerializeField] GameObject barrackMenu;
@@ -28,31 +27,29 @@ public class MenuManager : MonoBehaviour
     //Display Build Menu and Back Button
     public void OpenBuildMenu()
     {
-        SetAllFalse();
-        backButton.gameObject.SetActive(true);
+        ResetMenu();
         buildMenu.SetActive(true);
     }
 
     //Display Main Menu
     public void OpenMainMenu()
     {
-        SetAllFalse();
+        ResetMenu();
         mainMenu.SetActive(true);
     }
 
     public void OpenBarrackMenu()
     {
-        SetAllFalse();
-        Button barrack  = FindUIButton("Barrack", "Knight Button");
+        ResetMenu();
+        //Button barrack  = FindUIButton("Barrack", "Knight Button");
         barrackMenu.SetActive(true);
     }
 
-    private void SetAllFalse()
+    public void ResetMenu()
     {
-        backButton.gameObject.SetActive(false); ;
-        mainMenu.SetActive(false); ;
-        buildMenu.SetActive(false); ;
-        barrackMenu.SetActive(false); ;
+        mainMenu.SetActive(false);
+        buildMenu.SetActive(false);
+        barrackMenu.SetActive(false);
     }
 
     public Button FindUIButton(string menuType, string button)

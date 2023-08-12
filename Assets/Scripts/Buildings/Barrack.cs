@@ -29,8 +29,7 @@ public class Barrack : MonoBehaviour
     {
         if (GameManager.instance.selectedObjectDictionary.GetSelectedCount() == 1 && GameManager.instance.selectedObjectDictionary.IsInTable(gameObject.GetInstanceID()))
         {
-            //MenuManager.instance.OpenBarrackMenu();
-            MenuManager.instance.SetAllFalse();
+            MenuManager.instance.OpenBarrackMenu();
         }
     }
 
