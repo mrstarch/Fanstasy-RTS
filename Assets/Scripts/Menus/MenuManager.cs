@@ -11,7 +11,6 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject buildMenu;
-    [SerializeField] GameObject barrackMenu;
 
     private void Awake()
     {
@@ -38,18 +37,10 @@ public class MenuManager : MonoBehaviour
         mainMenu.SetActive(true);
     }
 
-    public void OpenBarrackMenu()
-    {
-        ResetMenu();
-        //Button barrack  = FindUIButton("Barrack", "Knight Button");
-        barrackMenu.SetActive(true);
-    }
-
     public void ResetMenu()
     {
         mainMenu.SetActive(false);
         buildMenu.SetActive(false);
-        barrackMenu.SetActive(false);
     }
 
     public Button FindUIButton(string menuType, string button)
@@ -57,10 +48,6 @@ public class MenuManager : MonoBehaviour
         if (menuType == "Building")
         {
             return buildMenu.transform.Find(button).GetComponent<Button>();
-        }
-        if (menuType == "Barrack")
-        {
-            return barrackMenu.transform.Find(button).GetComponent<Button>();
         }
         return null;
     }

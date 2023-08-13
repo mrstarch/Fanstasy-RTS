@@ -28,6 +28,12 @@ public class SelectObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Press ESC key
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            selectedTable.RemoveAllSelected();
+        }
+
         //Mouse has been pressed down
         if (Input.GetMouseButtonDown(0))
         {

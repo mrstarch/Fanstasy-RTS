@@ -1,6 +1,7 @@
 //Contains and handles all selection action for buildings and units 
 
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SelectedObjectDictionary : MonoBehaviour
@@ -17,6 +18,7 @@ public class SelectedObjectDictionary : MonoBehaviour
         {
             selectedTable.Add(id, gObject);
             gObject.transform.Find("Selection Indicator").gameObject.SetActive(true);
+            gObject.GetComponent<Barrack>().OpenBarrackMenu();
         }
     }
 
@@ -36,6 +38,7 @@ public class SelectedObjectDictionary : MonoBehaviour
         foreach(GameObject gObject in selectedTable.Values)
         {
             gObject.transform.Find("Selection Indicator").gameObject.SetActive(false);
+            gObject.GetComponent<Barrack>().CloseBarrackMenu();
         }
         selectedTable.Clear();
         MenuManager.instance.OpenMainMenu();
