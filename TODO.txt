@@ -1,0 +1,1 @@
+Make menu selection universal for all buildings
