@@ -1,39 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class GamePiece : MonoBehaviour
 {
-    [SerializeField] protected GameObject menu;
-    protected int health;
-
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-
-    //}
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}
+    [SerializeField] protected GameObject UI;
+    [SerializeField] protected GameObject Health;
+    protected int _health;
 
     public void OpenMenu()
     {
         MenuManager.instance.ResetMenu();
-        if (menu != null)
+        if (UI != null)
         {
-            menu.SetActive(true);
+            UI.SetActive(true);
         }
     }
 
     public void CloseMenu()
     {
         MenuManager.instance.ResetMenu();
-        if (menu != null)
+        if (UI != null)
         {
-            menu.SetActive(false);
+            UI.SetActive(false);
         }
     }
 }

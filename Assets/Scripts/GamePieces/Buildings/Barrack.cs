@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,7 @@ public class Barrack : GamePiece
     // Start is called before the first frame update
     void Start()
     {
-        health = 100;
+        _health = 100;
         foreach (GameObject unit in unitsList)
         {
             units.Add(unit.name, unit);
@@ -20,6 +21,8 @@ public class Barrack : GamePiece
     // Update is called once per frame
     void Update()
     {
+
+        Health.GetComponent<TextMeshProUGUI>().text = "HP " + _health;
     }
 
     public void CreateKnights()

@@ -1,6 +1,7 @@
+When Building add ESC cancel
 When selecting building and then other unit is also selected determine which menu to display
-Path finding for troops
 When selecting troops with buildings ignore buildings
+Path finding for troops
 Double clicking troops to select all on screen
 Attacking
 
