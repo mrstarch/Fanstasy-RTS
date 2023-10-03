@@ -1,1 +1,0 @@
-If barrack selected and then other unit is also selected menu does not change

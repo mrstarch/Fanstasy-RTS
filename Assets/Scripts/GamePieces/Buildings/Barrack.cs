@@ -2,18 +2,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Barrack : MonoBehaviour
+public class Barrack : GamePiece
 {
-    //private SelectedObjectDictionary selectedTable;
-    //private MenuManager menuManager;
-
     public List<GameObject> unitsList;
     private Dictionary<string, GameObject> units = new Dictionary<string, GameObject>();
-    [SerializeField] GameObject barrackMenu;
 
     // Start is called before the first frame update
     void Start()
     {
+        health = 100;
         foreach (GameObject unit in unitsList)
         {
             units.Add(unit.name, unit);
@@ -34,17 +31,17 @@ public class Barrack : MonoBehaviour
         }
     }
 
-    public void OpenBarrackMenu()
-    {
-        MenuManager.instance.ResetMenu();
-        barrackMenu.SetActive(true);
-    }
+    //public void OpenBarrackMenu()
+    //{
+    //    MenuManager.instance.ResetMenu();
+    //    menu.SetActive(true);
+    //}
 
-    public void CloseBarrackMenu()
-    {
-        MenuManager.instance.ResetMenu();
-        barrackMenu.SetActive(false);
-    }
+    //public void CloseBarrackMenu()
+    //{
+    //    MenuManager.instance.ResetMenu();
+    //    menu.SetActive(false);
+    //}
 }
 
 

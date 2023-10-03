@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 7915630753250016144}
   - component: {fileID: 4251076377845254578}
   m_Layer: 6
-  m_Name: Canvas
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -483,6 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e8eb164d92cf14d9808686683ca809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 3971346315159852181}
   unitsList:
   - {fileID: 7224540061623585186, guid: 5f2991b417e7b40439b29a6ad4e268fc, type: 3}
   barrackMenu: {fileID: 3971346315159852181}

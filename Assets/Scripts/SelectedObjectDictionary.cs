@@ -18,7 +18,7 @@ public class SelectedObjectDictionary : MonoBehaviour
         {
             selectedTable.Add(id, gObject);
             gObject.transform.Find("Selection Indicator").gameObject.SetActive(true);
-            gObject.GetComponent<Barrack>().OpenBarrackMenu();
+            gObject.GetComponent<GamePiece>().OpenMenu();
         }
     }
 
@@ -38,7 +38,7 @@ public class SelectedObjectDictionary : MonoBehaviour
         foreach(GameObject gObject in selectedTable.Values)
         {
             gObject.transform.Find("Selection Indicator").gameObject.SetActive(false);
-            gObject.GetComponent<Barrack>().CloseBarrackMenu();
+            gObject.GetComponent<GamePiece>().CloseMenu();
         }
         selectedTable.Clear();
         MenuManager.instance.OpenMainMenu();
